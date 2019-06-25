@@ -23,7 +23,7 @@
                         <legend>Cadastro de Contato</legend>
                         <div class="form-group"> <!--Grupo nome-->                            
                             <label for="name">Nome:</label>
-                            <input type="text" class="form-control" name="nome" id="nome">
+                            <input type="text" class="form-control" name="nome" id="nome" autofocus>
                         </div> <!--Grupo nome-->
                         <div class="form-group"> 
                             <!--Grupo fone-->
@@ -33,7 +33,7 @@
                         <div class="form-group"> <!--Grupo sexo-->
                             <div class="form-check form-check-inline">
                                 <label for="masc">
-                                    <input type="radio" name="sexo" id="masc"> Masculino
+                                    <input type="radio" name="sexo" id="masc" checked > Masculino
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
@@ -47,6 +47,19 @@
                                 </label>
                             </div>
                         </div> <!--Grupo sexo-->
+                        <div class="form-group"> <!--Grupo cidade-->                            
+                            <label for="cidade">Cidade:</label>
+                            <select name="cidade" id="cidade" class="form-control">
+                                <option value="">Natal</option>
+                                <option value="">Mossoró</option>
+                                <option value="">Parnamirim</option>
+                                <option value="">São Gonçalo</option>
+                            </select>
+                        </div> <!--Grupo cidade-->
+                        <div class="form-group"> <!--Grupo botões-->
+                            <button type="submit" class="btn btn-success">Salvar</button>
+                            <button type="reset" class="btn btn-danger">Limpar</button>
+                        </div> <!--Grupo botões-->
                     </fieldset>
                 </form>
 
