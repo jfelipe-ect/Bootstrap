@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bootstrap</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-6">
                 <!--Início Formulário-->
@@ -21,19 +19,23 @@
                 <form action="" method="get">
                     <fieldset>
                         <legend>Cadastro de Contato</legend>
-                        <div class="form-group"> <!--Grupo nome-->                            
+                        <div class="form-group">
+                            <!--Grupo nome-->
                             <label for="name">Nome:</label>
                             <input type="text" class="form-control" name="nome" id="nome" autofocus>
-                        </div> <!--Grupo nome-->
-                        <div class="form-group"> 
+                        </div>
+                        <!--Grupo nome-->
+                        <div class="form-group">
                             <!--Grupo fone-->
                             <label for="fone">Telefone:</label>
                             <input type="tel" class="form-control" name="fone" id="fone">
-                        </div> <!--Grupo fone-->
-                        <div class="form-group"> <!--Grupo sexo-->
+                        </div>
+                        <!--Grupo fone-->
+                        <div class="form-group">
+                            <!--Grupo sexo-->
                             <div class="form-check form-check-inline">
                                 <label for="masc">
-                                    <input type="radio" name="sexo" id="masc" checked > Masculino
+                                    <input type="radio" name="sexo" id="masc" checked> Masculino
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
@@ -46,8 +48,10 @@
                                     <input type="radio" name="sexo" id="indef"> Nao especificar
                                 </label>
                             </div>
-                        </div> <!--Grupo sexo-->
-                        <div class="form-group"> <!--Grupo cidade-->                            
+                        </div>
+                        <!--Grupo sexo-->
+                        <div class="form-group">
+                            <!--Grupo cidade-->
                             <label for="cidade">Cidade:</label>
                             <select name="cidade" id="cidade" class="form-control">
                                 <option value="">Natal</option>
@@ -55,24 +59,125 @@
                                 <option value="">Parnamirim</option>
                                 <option value="">São Gonçalo</option>
                             </select>
-                        </div> <!--Grupo cidade-->
-                        <div class="form-group"> <!--Grupo botões-->
-                            <button type="submit" class="btn btn-success">Salvar</button>
-                            <button type="reset" class="btn btn-danger">Limpar</button>
-                        </div> <!--Grupo botões-->
+                        </div>
+                        <!--Grupo cidade-->
+                        <div class="form-group">
+                            <!--Grupo botões-->
+                            <div class="row">
+                                <div class="col-6">
+                                    <button type="submit" class="btn btn-success btn-block">Salvar</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="reset" class="btn btn-danger btn-block">Limpar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grupo botões-->
                     </fieldset>
                 </form>
 
             </div>
-            <!--Início Formulário-->
+            <!--Final Formulário-->
 
 
             <div class="col-6">
                 <!--Início Tabela-->
+                <fieldset>
+                    <legend>Lista de Contatos</legend>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>nome</th>
+                                <th>telefone</th>
+                                <th>sexo</th>
+                                <th>cidade</th>
+                                <th></th>
 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>José</td>
+                                <td>3333-2222</td>
+                                <td>Masculino</td>
+                                <td>Natal</td>
+                                <td>
+                                    <button class="btn btn-outline-primary btn-sm">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                    <button class="btn btn-outline-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Maria</td>
+                                <td>3333-2222</td>
+                                <td>Feminino</td>
+                                <td>João Pessoa</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                    <button class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>João</td>
+                                <td>9999-8888</td>
+                                <td>Masculino</td>
+                                <td>Recife</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                    <button class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>David</td>
+                                <td>9999-8888</td>
+                                <td>Masculino</td>
+                                <td>Fortaleza</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                    <button class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Luiza</td>
+                                <td>4444-9999</td>
+                                <td>Feminino</td>
+                                <td>São Luis</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                    <button class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
 
             </div>
-            <!--Início Tabela-->
+            <!--Fim Tabela-->
 
 
         </div>
