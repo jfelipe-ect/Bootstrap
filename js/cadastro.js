@@ -1,15 +1,15 @@
 function cadastrar() {
 
-    let formulario = [];
-
     let nome = valida_nome(document.getElementById('nome').value);
-    formulario.push(nome);
+    if(nome == false) {
+        alert('Insira um nome válido!')
+        document.getElementById('nome').focus();
+        return;
+    }
 
-    let fone = valida_fone(document.getElementById('fone').value);
-    formulario.push(fone);
-
-    let cidade = document.getElementById('cidade').value;
-    formulario.push(cidade);
+    let fone = document.getElementById('fone').value;
+  
+    let cidade = document.getElementById('cidade').value;   
 
     let sexo = '';
 
@@ -21,9 +21,8 @@ function cadastrar() {
         sexo = 'Prefiro não comentar';
     }
 
-    formulario.push(sexo);
 
-    console.log(formulario);
+    insere_na_tabela(nome, fone, sexo, cidade);
 
     limpar_formulario();
 
@@ -50,8 +49,43 @@ function valida_nome(nome){
 }
 
 function eh_numero(numero){   
-        if (numero){
-            return false;
-        }
+        return !isNaN(numero);
+}
+
+function insere_na_tabela(nome, fone, sexo, cidade) {
+    let tabela = document
+    .getElementById('lista-contatos')
+    .getElementsByTagName('tbody')[0];
+
+    let ultima_linha = tabela.rows.length;
+
+    let linha = tabela.insertRow(ultima_linha);
+
+    let campo_id = linha.insertCell(0);
+    let campo_nome = linha.insertCell(1);
+    let campo_fone = linha.insertCell(2);
+    let campo_sexo = linha.insertCell(3);
+    let campo_cidade = linha.insertCell(4);
+    let acoes = linha.insertCell(5);
+
+    campo_id.innerHTML = ultima_linha;
+    campo_nome.innerHTML = nome;
+    campo_fone.innerHTML = fone;
+    campo_sexo.innerHTML = sexo;
+    campo_cidade.innerHTML = cidade;
+    acoes.innerHTML = insere_botoes_acoes();
+}
+
+function insere_botoes_acoes(){
+
+    let botao_editar = '<button class="btn btn-outline-primary btn-sm">';
+    botao_editar += '<i class="fas fa-pencil-alt"></i>';
+    botao_editar += '</button>'
+
+    let botao_excluir = '<button class="btn btn-outline-danger btn-sm">';
+    botao_excluir += '<i class="fas fa-trash-alt"></i>';
+    botao_excluir += '</button>';
     
+    return botao_editar + botao_excluir;
+
 }

@@ -18,7 +18,7 @@
         <!--Início corpo-->
         <div class="row" style="margin-top: 30px">
 
- 
+
 
             <!--Início Formulário-->
             <div class="col-6">
@@ -60,10 +60,10 @@
                             <!--Grupo cidade-->
                             <label for="cidade">Cidade:</label>
                             <select name="cidade" id="cidade" class="form-control">
-                                <option value="">Natal</option>
-                                <option value="">Mossoró</option>
-                                <option value="">Parnamirim</option>
-                                <option value="">São Gonçalo</option>
+                                <option value="Natal">Natal</option>
+                                <option value="Mossoró">Mossoró</option>
+                                <option value="Parnamirim">Parnamirim</option>
+                                <option value="São Gonçalo">São Gonçalo</option>
                             </select>
                         </div>
                         <!--Grupo cidade-->
@@ -71,7 +71,8 @@
                             <!--Grupo botões-->
                             <div class="row">
                                 <div class="col-6">
-                                    <button type="button" onclick="cadastrar()" class="btn btn-success btn-block">Salvar</button>
+                                    <button type="button" onclick="cadastrar();"
+                                        class="btn btn-success btn-block">Salvar</button>
                                 </div>
                                 <div class="col-6">
                                     <button type="reset" class="btn btn-danger btn-block">Limpar</button>
@@ -89,7 +90,7 @@
             <div class="col-6">
                 <fieldset>
                     <legend>Lista de Contatos</legend>
-                    <table  id="lista-contatos" class="table table-striped table-hover">
+                    <table id="lista-contatos" class="table table-striped table-hover">
                         <thead>
                             <tr>
                                 <th>id</th>
@@ -102,81 +103,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>José</td>
-                                <td>3333-2222</td>
-                                <td>Masculino</td>
-                                <td>Natal</td>
-                                <td>
-                                    <button class="btn btn-outline-primary btn-sm">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </button>
-                                    <button class="btn btn-outline-danger btn-sm">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Maria</td>
-                                <td>3333-2222</td>
-                                <td>Feminino</td>
-                                <td>João Pessoa</td>
-                                <td>
-                                    <button class="btn btn-outline-primary btn-sm">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </button>
-                                    <button class="btn btn-outline-danger btn-sm">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>João</td>
-                                <td>9999-8888</td>
-                                <td>Masculino</td>
-                                <td>Recife</td>
-                                <td>
-                                    <button class="btn btn-outline-primary btn-sm">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </button>
-                                    <button class="btn btn-outline-danger btn-sm">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>David</td>
-                                <td>9999-8888</td>
-                                <td>Masculino</td>
-                                <td>Fortaleza</td>
-                                <td>
-                                    <button class="btn btn-outline-primary btn-sm">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </button>
-                                    <button class="btn btn-outline-danger btn-sm">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Luiza</td>
-                                <td>4444-9999</td>
-                                <td>Feminino</td>
-                                <td>São Luis</td>
-                                <td>
-                                    <button class="btn btn-outline-primary btn-sm">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </button>
-                                    <button class="btn btn-outline-danger btn-sm">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </button>
-                                </td>
-                            </tr>
+
                         </tbody>
                     </table>
                 </fieldset>
@@ -187,7 +114,7 @@
         </div>
         <!--Final corpo-->
 
-      
+
 
     </div>
     <script src="../Bootstrap/js/popper.min.js"></script>
