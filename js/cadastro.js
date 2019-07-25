@@ -68,17 +68,17 @@ function insere_na_tabela(nome, fone, sexo, cidade) {
     let campo_cidade = linha.insertCell(4);
     let acoes = linha.insertCell(5);
 
-    campo_id.innerHTML = ultima_linha;
+    campo_id.innerHTML = ultima_linha + 1 ;
     campo_nome.innerHTML = nome;
     campo_fone.innerHTML = fone;
     campo_sexo.innerHTML = sexo;
     campo_cidade.innerHTML = cidade;
-    acoes.innerHTML = insere_botoes_acoes();
+    acoes.innerHTML = insere_botoes_acoes(ultima_linha+1);
 }
 
-function insere_botoes_acoes(){
+function insere_botoes_acoes(id){
 
-    let botao_editar = '<button class="btn btn-outline-primary btn-sm">';
+    let botao_editar = '<button type="button" onClick = "editar_linha_tabela(' + id + ')" class="btn btn-outline-primary btn-sm">';
     botao_editar += '<i class="fas fa-pencil-alt"></i>';
     botao_editar += '</button>'
 
@@ -88,4 +88,27 @@ function insere_botoes_acoes(){
     
     return botao_editar + botao_excluir;
 
+}
+
+function editar_linha_tabela(id){
+
+    let corpo_tabela = document
+    .getElementById('lista-contatos')
+    .getElementsByTagName('tbody')[0];
+
+    let qtd_linhas = corpo_tabela.rows.length;
+
+    for (let i = 0; i < qtd_linhas; i++){
+        if  (corpo_tabela.rows[i].cells[0].innerHTML == id){
+            let input_nome = document.getElementById('nome');
+            input_nome.value = corpo_tabela.rows[i].cells[1].innerHTML;
+            return;
+        }
+    }
+
+
+
+    
+   // alert("pode editar o nome!");
+    
 }
